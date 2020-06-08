@@ -1790,7 +1790,7 @@ ul {
 }
 
 .accordeon__item {
-  margin: 15px 15px;
+  margin: 15px auto;
   max-width: 60%;
   border: 1px solid #ebebeb;
   border-radius: 10px;
@@ -1883,10 +1883,10 @@ ul {
   }
   .questions__text {
     max-width: 100%;
-    margin-right: 20px;
+   
   }
   .accordeon__item {
-    max-width: 100%;
+    max-width: 80%;
   }
   .accordeon__question--item {
     font-size: 14px;
