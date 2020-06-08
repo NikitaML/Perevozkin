@@ -1,0 +1,209 @@
+.services {
+  &__title {
+    width: 190px;
+  }
+}
+.tabs {
+  &__nav {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+.tabs-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.tabs-nav__item {
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  flex: 1 0 33.33%;
+
+  padding: 20px;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+}
+.tabs-nav__item.is-active {
+  border-color: #fcdb50;
+}
+
+.tab {
+  display: none;
+  padding: 60px 0;
+}
+.tab.is-active {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-card {
+  width: 365px;
+  height: 348px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px 50px 10px 10px;
+  transition: all 0.5s;
+
+  &__title {
+    max-width: 250px;
+    margin: 20px auto;
+    text-align: center;
+
+    a {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__descrs {
+    max-width: 238px;
+    margin: 0 auto;
+    padding: 20px 0 0 25px;
+  }
+
+  &__descr {
+    position: relative;
+
+    &::before {
+      content: url(../images/services/dots.svg);
+      position: absolute;
+      top: 0;
+      left: -35px;
+    }
+
+    p {
+      letter-spacing: 0.05em;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__descr + &__descr {
+    margin-top: 20px;
+  }
+
+  &__button {
+    width: 238px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+.button {
+  &__order {
+    a {
+      padding: 10px 70px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid #fcdb50;
+      color: #fcdb50;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 36px;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+.tabs-wrapper {
+  background-color: #eff4ff;
+}
+
+.tab-card:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  background-image: url(../images/services/card-bg.svg);
+  background-repeat: no-repeat;
+  background-position: 115px 196px;
+  .tab-card__title {
+    color: #fcdb50;
+  }
+  .button__order {
+    a {
+      background-color: #fff;
+      &:hover {
+        color: #fff;
+        background-color: #fcdb50;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .tab {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .tab-card {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .tab-card:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 775px) {
+  .tab-card {
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    background-image: url(../images/services/card-bg.svg);
+    background-repeat: no-repeat;
+    background-position: right -50px bottom -75px;
+    &__descrs {
+      max-width: 400px;
+    }
+    .button__order {
+      a {
+        background-color: #fff;
+      }
+    }
+  }
+  .tab-card:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid #e8e8e8;
+    background-image: url(../images/services/card-bg.svg);
+    background-position: right -50px bottom -75px;
+  }
+}
+
+@media (max-width: 660px) {
+  .tabs {
+    .tabs-nav__item {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .services {
+    &__title {
+      width: 150px;
+    }
+  }
+  .tab-card {
+    max-width: 100%;
+    height: 348px;
+
+    &__title {
+      max-width: 250px;
+      margin: 20px auto 5px auto;
+      a {
+        font-size: 16px;
+      }
+    }
+
+    &__descrs {
+      max-width: 238px;
+      margin: 0 auto;
+      padding: 20px 0 0 25px;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.questions {
+  padding-bottom: 100px;
+
+  &__title {
+    max-width: 260px;
+  }
+  &__text {
+    max-width: 80%;
+    margin: 0 auto;
+
+    p {
+      @include text-main;
+    }
+  }
+}
+
+.questions-accordeon {
+  margin-bottom: 60px;
+}
+.accordeon__item {
+  margin: 15px auto;
+  max-width: 60%;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  background: #fff;
+
+  font-style: normal;
+  font-weight: normal;
+}
+
+.accordeon__question {
+  position: relative;
+  cursor: pointer;
+}
+
+.accordeon__question--item {
+  padding: 20px 30px;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.07em;
+  font-weight: 400;
+}
+
+.accordeon__question::after,
+.accordeon__question::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  background-color: #bdbcbc;
+  position: absolute;
+  top: 32px;
+  transition: all 0.3s ease 0s;
+}
+.accordeon__question::after {
+  transform: rotate(-40deg);
+  right: 30px;
+}
+.accordeon__question::before {
+  transform: rotate(40deg);
+  right: 38px;
+}
+.accordeon__question.accordeon-active::after,
+.accordeon__question.accordeon-active::before {
+  background-color: #fcdb40;
+}
+.accordeon__question.accordeon-active::after {
+  transform: rotate(40deg);
+}
+.accordeon__question.accordeon-active::before {
+  transform: rotate(-40deg);
+}
+
+.accordeon__answer {
+  display: none;
+}
+
+.accordeon__item.accordeon-active {
+  border-color: #fcdb40;
+}
+
+.accordeon__answer--item {
+  padding: 0px 30px 20px 30px;
+  @include text-main;
+}
+
+@media (max-width: 850px) {
+  .accordeon {
+    &__item {
+      max-width: 80%;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .questions {
+    &__title {
+      max-width: 200px;
+    }
+  }
+  .questions-accordeon {
+    margin-bottom: 30px;
+  }
+
+  .questions {
+    &__text {
+      max-width: 100%;
+    }
+  }
+  .accordeon {
+    &__item {
+      max-width: 100%;
+    }
+
+    &__question--item {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__answer--item {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}

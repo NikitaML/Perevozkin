@@ -1,0 +1,213 @@
+//-----------------------------style Pop-up Form ------------------------------------//
+.popup {
+    display: none;
+}
+.pop-up {
+    max-width: 477px;
+    margin: 50px auto;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    background-color: #fff;
+    background-image: url(../images/action-card/card-bg.svg);
+    background-repeat: no-repeat;
+    background-position: right -40px bottom -80px;
+    position: relative;
+    // &::before,
+    // &::after {
+    //     cursor: pointer;
+    //     position: absolute;
+    //     content: "";
+    //     top: 30px;
+    //     right: 30px;
+    //     width: 26px;
+    //     height: 2px;
+    //     background-color: #1a051d;
+    // }
+    // &::before {
+    //     transform: rotate(-45deg);
+    // }
+    // &::after {
+    //     transform: rotate(45deg);
+    // }
+
+    &__inner {
+        padding: 42px;
+        width: 100%;
+    }
+
+    &__title {
+        margin: 0 auto;
+        max-width: 284px;
+        padding-bottom: 20px;
+        p {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+        }
+    }
+
+    &__inputs {
+        padding-top: 15px;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    &__input {
+        max-width: 100%;
+        position: relative;
+        height: 65px;
+        margin-bottom: 27px;
+        overflow: hidden;
+        padding-left: 5px;
+    }
+
+    &__submit {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__descr {
+        margin: 0 auto;
+        max-width: 289px;
+        margin-top: 20px;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 15px;
+        opacity: 0.5;
+    }
+}
+
+.confirm {
+    max-width: 325px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    &__button {
+        margin-top: 20px;
+        padding: 12px 66px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #fcdb50;
+        background: #555655;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            color: #fff;
+            background: #fcdb50;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+.pop-up__input input {
+    width: 100%;
+    height: 100%;
+    color: #1a051d;
+    padding-top: 15px;
+    padding-left: 40px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+}
+
+.name-data {
+    background-image: url(../images/footer/name.svg);
+    background-repeat: no-repeat;
+    background-position: 0px 20px;
+}
+
+.namber-data {
+    background-image: url(../images/footer/phone.svg);
+    background-repeat: no-repeat;
+    background-position: 0px 20px;
+}
+
+.pop-up__input label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 14px;
+}
+
+.pop-up__input label::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid #fcdb50;
+    transform: translateX(-150%);
+    transition: transform 0.3s ease;
+}
+
+.content-name,
+.content-namber {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.pop-up__input input:focus + .pop-up__label .content-name,
+.pop-up__input input:valid + .pop-up__label .content-name {
+    transform: translate(-57%, -300%);
+
+    font-size: 12px;
+    color: #555555;
+}
+
+.pop-up__input input:focus + .pop-up__label .content-namber,
+.pop-up__input input:valid + .pop-up__label .content-namber {
+    transform: translate(-37%, -260%);
+    font-size: 12px;
+    color: #555555;
+}
+
+.pop-up__input input:focus + .pop-up__label:after,
+.pop-up__input input:valid + .pop-up__label:after {
+    transform: translateX(0%);
+}
+
+@media (max-width: 450px) {
+    .confirm {
+        max-width: 325px;
+        margin: 0 auto;
+
+        text-align: center;
+
+        &__button {
+            padding: 12px 50px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    .pop-up {
+        &__title {
+            padding-bottom: 10px;
+            p {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+            }
+        }
+
+        &__inputs {
+            width: 90%;
+        }
+    }
+}

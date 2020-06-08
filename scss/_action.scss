@@ -1,0 +1,125 @@
+.action {
+  margin-bottom: 50px;
+  &__title {
+    max-width: 360px;
+  }
+  &__text {
+    width: 1069px;
+    margin-top: 60px;
+    p {
+      font-style: italic;
+      font-weight: 300;
+      @include text-main;
+    }
+  }
+}
+
+.action-card {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  &__item {
+    max-width: 450px;
+    border: 1px solid #e8e8e8;
+    /*box-shadow: 0px 4px 4px rgba(252, 219, 80, 0.31);*/
+    border-radius: 10px 50px 10px 10px;
+    cursor: pointer;
+    background-image: url(../images/action-card/card-bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom -80px right -50px;
+    &:hover {
+      box-shadow: 2px 2px 4px rgba(252, 219, 80, 0.31);
+    }
+  }
+
+  &__content {
+    padding: 20px 30px;
+  }
+  &__title {
+    margin-bottom: 10px;
+    h5 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 22px;
+    max-width: 368px;
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__button {
+    max-width: 120px;
+    a {
+      padding: 10px 70px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid #fcdb50;
+      color: #fcdb50;
+      background-color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 36px;
+      letter-spacing: 0.05em;
+      transition: all 0.3s;
+      &:hover {
+        color: #fff;
+        background-color: #fcdb50;
+      }
+    }
+  }
+}
+
+@media (max-width: 915px) {
+  .action-card {
+    max-width: 1000px;
+
+    flex-direction: column;
+
+    &__item {
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    &__item:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .action {
+    &__title {
+      max-width: 280px;
+    }
+  }
+  .action-card {
+    &__title {
+      h5 {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .action-card {
+    &__button {
+      width: 120px;
+      a {
+        padding: 10px 50px;
+      }
+    }
+  }
+}
