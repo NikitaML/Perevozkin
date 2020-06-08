@@ -1886,9 +1886,10 @@ ul {
    
   }
   .accordeon__item {
-    max-width: 80%;
+    max-width: 100%;
   }
-  .accordeon__question--item {
+  .accordeon__question--item
+  {margin-right:20px;
     font-size: 14px;
     line-height: 20px;
   }
