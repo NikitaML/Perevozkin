@@ -1790,7 +1790,7 @@ ul {
 }
 
 .accordeon__item {
-  margin: 15px auto;
+  margin: 15px 15px;
   max-width: 60%;
   border: 1px solid #ebebeb;
   border-radius: 10px;
